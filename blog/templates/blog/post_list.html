@@ -1,18 +1,32 @@
+{% load static %}
 <html>
     <head>
         <title>Django Girls blog</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/blog1.css' %}">
+        <link href="{%static 'css/teapot.gif'%}">
     </head>
     <body>
         <div>
-    <h1><a href="/">Django Girls Blog</a></h1>
-</div>
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
 
-{% for Post in posts %}
-    <div>
-        <p>published: {{ Post.published_date }}</p>
-        <h2><a href="">{{ Post.title }}</a></h2>
-        <p>{{ Post.text|linebreaksbr }}</p>
+        {% for post in posts %}
+
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+
+      <div class="gallery">
+    <a target="_blank" href="css/teapot.gif">
+     <img src="css/teapot.gif" alt="Dzbanek" width="600" height="400">
+    </a>
+    <div class="desc">Dzbanek</div>
     </div>
-{% endfor %}
     </body>
 </html>

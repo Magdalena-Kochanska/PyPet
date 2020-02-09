@@ -1,0 +1,17 @@
+
+h1 a, h2 a  {
+     color: #800000;
+     font-family: 'Abril Fatface', cursive;
+}
+
+
+#layout {
+    width: 140px;
+    height: 51px;
+    background: url(https://cdn.dribbble.com/users/1505733/screenshots/4952613/tea_kettle_db.gif?vid=1) top left no-repeat;
+}
+
+body {
+
+    padding-left: 26px;
+}
