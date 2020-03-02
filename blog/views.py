@@ -25,7 +25,11 @@ def post_new(request):
             return redirect('post_detail', pk=post.pk)
     else:
         form = PostForm()
+<<<<<<< HEAD
     return render(request, 'blog/post_edit.html', {'form': form})
+=======
+    return render(request, 'blog/post_edit.html',{'form': form})
+>>>>>>> 7c8fadc19834d4a8cc9cb7585160cf330693bdd9
 
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
